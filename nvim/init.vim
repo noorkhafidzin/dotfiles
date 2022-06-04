@@ -41,7 +41,7 @@ call plug#begin('~/AppData/local/nvim/plugged')
     Plug 'preservim/nerdtree'
 
     " Completion / linters / formatters
-    Plug 'neoclide/coc.nvim',  {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+    Plug 'neoclide/coc.nvim',  {'branch': 'master', 'do': 'yarn install'}
     Plug 'plasticboy/vim-markdown'
 
     " Git
@@ -70,6 +70,21 @@ nnoremap <F4> :bd<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <F6> :sp<CR>:terminal pwsh<CR>
 
+" Terminal mode
+:tnoremap <Esc> <C-\><C-n>
+:tnoremap <A-h> <C-\><C-N><C-w>h
+:tnoremap <A-j> <C-\><C-N><C-w>j
+:tnoremap <A-k> <C-\><C-N><C-w>k
+:tnoremap <A-l> <C-\><C-N><C-w>l
+:inoremap <A-h> <C-\><C-N><C-w>h
+:inoremap <A-j> <C-\><C-N><C-w>j
+:inoremap <A-k> <C-\><C-N><C-w>k
+:inoremap <A-l> <C-\><C-N><C-w>l
+:nnoremap <A-h> <C-w>h
+:nnoremap <A-j> <C-w>j
+:nnoremap <A-k> <C-w>k
+:nnoremap <A-l> <C-w>l
+
 " Tabs
 nnoremap <S-Tab> gT
 nnoremap <Tab> gt
@@ -80,4 +95,3 @@ let g:floaterm_keymap_new    = '<Leader>t'
 let g:floaterm_keymap_prev   = '<F8>'
 let g:floaterm_keymap_next   = '<F9>'
 let g:floaterm_keymap_toggle = '<C-j>'
-
