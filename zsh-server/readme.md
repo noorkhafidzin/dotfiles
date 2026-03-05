@@ -3,6 +3,11 @@
 sudo apt install zsh
 ```
 
+## Install Oh-My-Zsh
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 ## Install Plugin Oh-My-Zsh
 
 ### 1. zsh-autosuggestions
@@ -35,5 +40,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ```bash
 source ~/.zshrc
 ```
+
 
 ---
