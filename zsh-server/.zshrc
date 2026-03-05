@@ -74,7 +74,6 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 autoload -U compinit && compinit
 source "$ZSH/oh-my-zsh.sh"
-#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -113,13 +112,3 @@ alias dc='docker compose'
 alias ta='tmux attach'
 alias tl='tmux list-sessions'
 alias tn='tmux new-session'
-
-eval "$(starship init zsh)"
-
-. "$HOME/.atuin/bin/env"
-
-eval "$(atuin init zsh)"
-eval "$(atuin init zsh)"
-
-# Created by `pipx` on 2025-12-07 08:27:26
-export PATH="$PATH:/home/el/.local/bin"
