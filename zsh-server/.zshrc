@@ -112,3 +112,5 @@ alias dc='docker compose'
 alias ta='tmux attach'
 alias tl='tmux list-sessions'
 alias tn='tmux new-session'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
