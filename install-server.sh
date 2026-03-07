@@ -2,7 +2,7 @@
 
 # =============================================================================
 #  Auto Installer: Zsh + Oh-My-Zsh + Plugins + fzf + tmux
-#  Usage: sh -c "$(curl -fsSL https://raw.githubusercontent.com/<USER>/<REPO>/main/install.sh)"
+#  Usage: sh -c "$(curl -fsSL https://raw.githubusercontent.com/noorkhafidzin/dotfiles/master/install-server.sh)"
 # =============================================================================
 
 set -e
@@ -19,8 +19,8 @@ RESET='\033[0m'
 # Ganti dengan username dan nama repo GitHub kamu
 GITHUB_USER="noorkhafidzin"
 GITHUB_REPO="dotfiles"
-GITHUB_BRANCH="main"
-RAW_BASE="https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}"
+GITHUB_BRANCH="master"
+RAW_BASE="https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/refs/heads/${GITHUB_BRANCH}"
 
 # -------------------------------------------------------
 log()     { echo -e "${GREEN}${BOLD}[✔]${RESET} $1"; }
