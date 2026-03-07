@@ -36,6 +36,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
+## Install tmux
+```bash
+sudo apt install tmux
+```
+
 ### Setelah install, reload zsh:
 ```bash
 source ~/.zshrc
@@ -43,3 +48,4 @@ source ~/.zshrc
 
 
 ---
+
