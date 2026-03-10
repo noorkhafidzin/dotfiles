@@ -4,7 +4,7 @@
     "audio_output": "hdmi",
     "auto_play": true,
     "check_updates": true,
-    "client_uuid": "4dcf1fe0-a31d-416c-ae9e-bf72d8702964",
+    "client_uuid": "",
     "connect_retry_mins": 0,
     "direct_paths": false,
     "discord_presence": true,
