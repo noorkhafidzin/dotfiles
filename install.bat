@@ -14,6 +14,33 @@ set "SOURCE_DIR=%~dp0powershell"
 set "PROFILE_DIR=%USERPROFILE%\Documents\PowerShell"
 set "PROFILE_FILE=%PROFILE_DIR%\Microsoft.PowerShell_profile.ps1"
 
+:: Check and install required dependencies via winget
+:: oh-my-posh
+where oh-my-posh >nul 2>&1
+if errorlevel 1 (
+    echo [INFO] oh-my-posh not found. Installing via winget...
+    winget install --id JanDeDobbeleer.OhMyPosh -e
+    if errorlevel 1 (
+        echo [ERROR] Failed to install oh-my-posh. Please install manually and re-run the installer.
+        exit /b 1
+    )
+) else (
+    echo [INFO] oh-my-posh is already installed.
+)
+
+:: zoxide
+where zoxide >nul 2>&1
+if errorlevel 1 (
+    echo [INFO] zoxide not found. Installing via winget...
+    winget install --id ajeetdsouza.zoxide -e
+    if errorlevel 1 (
+        echo [ERROR] Failed to install zoxide. Please install manually and re-run the installer.
+        exit /b 1
+    )
+) else (
+    echo [INFO] zoxide is already installed.
+)
+
 :: Check if source files exist
 if not exist "%SOURCE_DIR%\user_profile.ps1" (
     echo [ERROR] user_profile.ps1 not found in %SOURCE_DIR%
